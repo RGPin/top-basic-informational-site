@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/RGPin/top-basic-informational-site/issues"
   },
-  "homepage": "https://github.com/RGPin/top-basic-informational-site#readme"
+  "homepage": "https://github.com/RGPin/top-basic-informational-site#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
