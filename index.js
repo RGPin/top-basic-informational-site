@@ -47,8 +47,27 @@ app.get("/contact-me", (req, res) => {
   res.sendFile(path.join(__dirname, "contact-me.html"));
 });
 
-// app.use((req, res) => {
-//   res.status(404).sendFile(path.join(__dirname, "404.html"));
+app.get("/:user/messages", (req, res) => {
+  console.log(req.params);
+  res.end();
+});
+
+app.get("/:id/detail/:desc", (req, res) => {
+  console.log(req.params.id);
+  res.end();
+});
+
+app.get("/number", (req, res) => {
+  console.log(req.query);
+  res.end();
+});
+
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(__dirname, "404.html"));
+});
+
+// app.get("/{*splat}", (req, res) => {
+//   res.sendFile(path.join(__dirname, "404.html"));
 // });
 
 const PORT = 8080;
